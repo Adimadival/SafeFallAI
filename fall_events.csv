@@ -1,0 +1,8 @@
+Timestamp,Person_ID,Severity,Fall_Duration_sec,Fall_Score,Screenshot_Path
+2026-10-17 12:17:46,1,MODERATE,1.3,0.556,fall_logs\fall_20261017_121746_person1.png
+2026-10-17 12:18:17,1,MILD,0.1,0.643,fall_logs\fall_20261017_121817_person1.png
+2026-10-17 12:19:01,12,MILD,0.2,0.31,fall_logs\fall_20261017_121901_person12.png
+2026-10-17 12:30:23,1,MILD,0.1,0.319,fall_logs\fall_20261017_123023_person1.png
+2026-10-17 12:31:06,1,MILD,0.1,0.428,fall_logs\fall_20261017_123106_person1.png
+2026-10-17 12:43:11,1,MILD,0.8,0.312,fall_logs\fall_20261017_124311_person1.png
+2026-10-17 12:44:10,9,MILD,0.1,0.338,fall_logs\fall_20261017_124410_person9.png
