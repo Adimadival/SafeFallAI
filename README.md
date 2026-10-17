@@ -1,84 +1,83 @@
-\# SafeFall AI — Fall Detection and Elder Care
+﻿# SafeFall AI — Fall Detection and Elder Care
 
+## Overview
+SafeFall AI is a prototype designed to detect potential falls using a webcam-based computer vision pipeline and provide an audible alert.
 
+## Problem Statement
+Older adults who live alone may need timely assistance after a fall. SafeFall AI explores how computer vision and temporal analysis can help identify potential fall events.
 
-\## Problem
+## Current Features
+- Webcam-based person and pose analysis
+- Fall scoring using movement and posture-related features
+- Temporal confirmation to reduce false alarms
+- Audible alert when a fall is detected
+- Fall-event logging, where configured
 
-Elderly people who fall while alone may not receive timely assistance.
+## Technology Stack
+- Python
+- OpenCV
+- Computer vision and pose estimation
+- Weighted scoring and temporal state machine
 
+## Requirements
+- Windows 11 or another compatible Python environment
+- Python version compatible with the project dependencies
+- Webcam
+- Project dependencies listed in `requirements.txt`
 
+## Installation
+Clone the repository:
 
-\## Proposed Solution
+```bash
+git clone https://github.com/Adimadival/SafeFallAI.git
+cd SafeFallAI
+```
 
-SafeFall AI is a computer-vision prototype that analyses a webcam feed, estimates body pose, identifies potential fall-like movements and triggers an audible alert.
+Create and activate a virtual environment on Windows:
 
+```powershell
+py -3.12 -m venv .venv312
+.\.venv312\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
 
+## Run
+Start webcam-based detection:
 
-\## Current Features
+```powershell
+python main.py --source 0
+```
 
-\- Webcam-based pose estimation
+If your Python version or dependency requirements differ, follow the versions supported by the project.
 
-\- Fall scoring using body movement and posture features
+## Testing
+Test in a safe, controlled environment:
+- Normal standing and walking
+- Sitting and slowly lying down
+- Controlled movement resembling a potential fall
+- Audible alert behaviour
 
-\- Temporal confirmation to reduce false alerts
+Do not intentionally fall to test the system.
 
-\- Audible alert for detected fall-like events
+## Hackathon Integration Status
+The local Python prototype is available for development and testing. PipeGen integration, NVIDIA GPU execution, TensorRT engine generation, performance reporting and required pipeline evidence must be verified separately before claiming completion.
 
+## Limitations
+- This is a prototype, not a certified medical or emergency-response system.
+- Detection may produce false positives or miss falls.
+- A webcam may not cover every room or movement.
+- Local testing on AMD graphics does not demonstrate NVIDIA TensorRT compatibility.
 
+## Privacy and Safety
+Use the camera only with appropriate consent. Protect recorded video and event logs. Do not rely on this prototype as the sole method of emergency monitoring.
 
-\## Technology Stack
+## Future Improvements
+- Validate performance using representative test data
+- Integrate with the required PipeGen workflow
+- Evaluate on compatible NVIDIA hardware
+- Measure detection latency and false-positive rates
+- Add privacy-preserving and caregiver-notification options
 
-\- Python
-
-\- OpenCV
-
-\- Pose estimation
-
-\- Weighted scoring and temporal state machine
-
-
-
-\## Run Locally
-
-Create and activate a Python virtual environment, install the dependencies from `requirements.txt`, then run:
-
-
-
-`python main.py --source 0`
-
-
-
-\## Testing
-
-Test cases include standing, sitting, slowly lying down and controlled fall-like movements performed safely. Record the observed results rather than claiming unverified accuracy.
-
-
-
-\## Current Limitations
-
-This is a prototype, not a certified medical or emergency-response system. The local Windows AMD setup has not yet demonstrated the mandatory NVIDIA TensorRT and DeepStream deployment required for PipeGen Track A.
-
-
-
-\## Hackathon Integration
-
-PipeGen pipeline stages, TensorRT engine, speed report and NVIDIA live-run evidence must be added after successful execution in a supported environment.
-
-
-
-\## Privacy
-
-Avoid saving identifiable video unless necessary and consented to. Apply privacy blur before saving any frames.
-
-
-
-\## Future Work
-
-\- JSON or MQTT incident notifications
-
-\- Privacy-preserving video processing
-
-\- Evaluation on diverse fall and non-fall scenarios
-
-\- Edge deployment and performance benchmarking
-
+## Repository
+https://github.com/Adimadival/SafeFallAI
